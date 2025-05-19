@@ -46,7 +46,7 @@ LEARNING DSA/
 │   ├── DisjointSet/         # Disjoint set/Union-Find
 │   ├── Heaps/               # Advanced heaps (Fibonacci, Pairing)
 │   ├── Persistence/         # Persistent data structures
-│   ...                      # (Add more as you expand)
+│   ...                      # (See more as you expand)
 │
 ├── my-dsa-platform/          # Interactive testing platform
 │   ├── data/                 # Your solution files

@@ -26,10 +26,27 @@ Learning DSA is a comprehensive repository designed to make learning Data Struct
 ```
 LEARNING DSA/
 ├── Theories/                 # Theoretical concepts with implementations
-│   ├── Stack.py              # Stack data structure theory and implementation
-│   ├── Queues.py             # Queue data structure theory and implementation  
-│   ├── Tree.py               # Tree data structure theory and implementation
-│   └── Linked List.py        # Linked list data structure theory and implementation
+│   ├── Data Structure/      # Core data structures (Array, Linked List, Stack, Queue, Tree, etc.)
+│   ├── Sorting/             # Sorting algorithms (Bubble, Quick, Merge, Heap, etc.)
+│   ├── Searching/           # Searching algorithms (Linear, Binary, Jump, etc.)
+│   ├── DP/                  # Dynamic Programming and Divide & Conquer
+│   ├── Greedy/              # Greedy algorithms
+│   ├── Bitwise/             # Bit manipulation techniques
+│   ├── Graphs/              # Graph algorithms (BFS, DFS, etc.)
+│   ├── Trees/               # Tree algorithms (Traversals, Segment Trees, etc.)
+│   ├── NumberTheory/        # Number theory algorithms (GCD, Sieve, etc.)
+│   ├── Strings/             # String algorithms (KMP, Rabin-Karp, etc.)
+│   ├── Geometry/            # Geometry algorithms (Convex Hull, etc.)
+│   ├── Randomized/          # Randomized algorithms
+│   ├── Compression/         # Data compression algorithms (Huffman, RLE)
+│   ├── Caching/             # Caching and LRU cache
+│   ├── Memory/              # Memory management (GC, reference counting)
+│   ├── Analysis/            # Amortized and complexity analysis
+│   ├── Hashing/             # Hashing techniques
+│   ├── DisjointSet/         # Disjoint set/Union-Find
+│   ├── Heaps/               # Advanced heaps (Fibonacci, Pairing)
+│   ├── Persistence/         # Persistent data structures
+│   ...                      # (Add more as you expand)
 │
 ├── my-dsa-platform/          # Interactive testing platform
 │   ├── data/                 # Your solution files

@@ -39,16 +39,15 @@ def find_matching_test_file(code_file_name, test_folder):
     """Find a test file that matches the given code file name."""
     # Remove the extension from the code file
     base_name = os.path.splitext(code_file_name)[0]
-    
+    # The expected test file name is '<base_name> test.json'
+    expected_test_file = f"{base_name} test.json"
+    test_file_path = os.path.join(test_folder, expected_test_file)
+    if os.path.exists(test_file_path):
+        return test_file_path
+    # Fallback: try to find any file that starts with base_name and ends with ' test.json'
     for f in os.listdir(test_folder):
-        test_base_name = os.path.splitext(f)[0]
-        # Check if it's the same name with "test" added
-        if test_base_name == f"{base_name} test":
+        if f.startswith(base_name) and f.endswith(" test.json"):
             return os.path.join(test_folder, f)
-        # Check if it's like '3. sample name test'
-        if test_base_name == f"{base_name} test" or test_base_name.endswith(" test"):
-            return os.path.join(test_folder, f)
-    
     return None
 
 def format_value(value):
@@ -198,42 +197,37 @@ def find_files_by_input(input_str, data_folder, test_folder):
     """Find matching code and test files based on input (number or name)."""
     data_file = None
     test_file = None
-    
     # Case 1: Input is a problem number (e.g., "13")
     # Look for files starting with that number (e.g., "13. sample.py")
     for f in os.listdir(data_folder):
         if f.startswith(f"{input_str}.") or f == f"{input_str}.py":
             data_file = os.path.join(data_folder, f)
-            # Find matching test file
+            # Find matching test file (stricter logic)
             test_file = find_matching_test_file(f, test_folder)
             if test_file:
                 return data_file, test_file
-    
     # Case 2: Input is a full or partial filename without extension
-    # (e.g., "stack" should match "stack.py" or "13. stack.py")
     for f in os.listdir(data_folder):
         base_name = os.path.splitext(f)[0]
         if input_str == base_name or base_name.endswith(f" {input_str}"):
             data_file = os.path.join(data_folder, f)
-            # Find matching test file
             test_file = find_matching_test_file(f, test_folder)
             if test_file:
                 return data_file, test_file
-    
     # Case 3: Input is a problem name that might include the number
-    # (e.g., "13. stack" should match "13. stack.py")
     for f in os.listdir(data_folder):
         base_name = os.path.splitext(f)[0]
         if base_name.startswith(input_str):
             data_file = os.path.join(data_folder, f)
-            # Find matching test file
             test_file = find_matching_test_file(f, test_folder)
             if test_file:
                 return data_file, test_file
-                
     return data_file, test_file
 
 if __name__ == "__main__":
+    print(f"[DEBUG] sys.argv: {sys.argv}")
+    print(f"[DEBUG] Current working directory: {os.getcwd()}")
+    
     if len(sys.argv) != 2:
         print(f"{Fore.RED}Usage: python test_runner.py <problem_identifier>")
         print(f"{Fore.YELLOW}The problem identifier can be:")

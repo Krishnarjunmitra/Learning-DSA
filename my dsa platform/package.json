@@ -4,8 +4,10 @@
   "description": "Running DSA solutions with test cases like LeetCode",
   "main": "test_runner.py",
   "scripts": {
-    "test": "python test_runner.py"
+    "test": "python test_runner.py",
+    "list": "node list-problems.js"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Krishnarjunmitra/Learning-DSA.git"
@@ -15,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/Krishnarjunmitra/Learning-DSA/issues"
   },
-  "homepage": "https://github.com/Krishnarjunmitra/Learning-DSA#README"
+  "homepage": "https://github.com/Krishnarjunmitra/Learning-DSA#README",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "colorama": "^0.0.0"
+  }
 }

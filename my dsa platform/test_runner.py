@@ -28,11 +28,27 @@ def clear_screen():
     else:
         os.system('clear')
 
-def find_file(prefix, folder, suffix=""):
-    """Find a file with given prefix and optional suffix in specified folder."""
+def find_code_file(name, folder):
+    """Find a code file in specified folder based on a problem name."""
     for f in os.listdir(folder):
-        if f.startswith(f"{prefix}.") and suffix in f:
+        if f == name or f.startswith(f"{name}."):
             return os.path.join(folder, f)
+    return None
+
+def find_matching_test_file(code_file_name, test_folder):
+    """Find a test file that matches the given code file name."""
+    # Remove the extension from the code file
+    base_name = os.path.splitext(code_file_name)[0]
+    
+    for f in os.listdir(test_folder):
+        test_base_name = os.path.splitext(f)[0]
+        # Check if it's the same name with "test" added
+        if test_base_name == f"{base_name} test":
+            return os.path.join(test_folder, f)
+        # Check if it's like '3. sample name test'
+        if test_base_name == f"{base_name} test" or test_base_name.endswith(" test"):
+            return os.path.join(test_folder, f)
+    
     return None
 
 def format_value(value):
@@ -178,22 +194,77 @@ def run_test(data_file, test_file):
     print(f"{Fore.CYAN}  Total Time: {Fore.WHITE}{total_time} ms")
     print(f"{Fore.CYAN}{'_'*terminal_width}")
 
+def find_files_by_input(input_str, data_folder, test_folder):
+    """Find matching code and test files based on input (number or name)."""
+    data_file = None
+    test_file = None
+    
+    # Case 1: Input is a problem number (e.g., "13")
+    # Look for files starting with that number (e.g., "13. sample.py")
+    for f in os.listdir(data_folder):
+        if f.startswith(f"{input_str}.") or f == f"{input_str}.py":
+            data_file = os.path.join(data_folder, f)
+            # Find matching test file
+            test_file = find_matching_test_file(f, test_folder)
+            if test_file:
+                return data_file, test_file
+    
+    # Case 2: Input is a full or partial filename without extension
+    # (e.g., "stack" should match "stack.py" or "13. stack.py")
+    for f in os.listdir(data_folder):
+        base_name = os.path.splitext(f)[0]
+        if input_str == base_name or base_name.endswith(f" {input_str}"):
+            data_file = os.path.join(data_folder, f)
+            # Find matching test file
+            test_file = find_matching_test_file(f, test_folder)
+            if test_file:
+                return data_file, test_file
+    
+    # Case 3: Input is a problem name that might include the number
+    # (e.g., "13. stack" should match "13. stack.py")
+    for f in os.listdir(data_folder):
+        base_name = os.path.splitext(f)[0]
+        if base_name.startswith(input_str):
+            data_file = os.path.join(data_folder, f)
+            # Find matching test file
+            test_file = find_matching_test_file(f, test_folder)
+            if test_file:
+                return data_file, test_file
+                
+    return data_file, test_file
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print(f"{Fore.RED}Usage: python test_runner.py <problem_number>")
+        print(f"{Fore.RED}Usage: python test_runner.py <problem_identifier>")
+        print(f"{Fore.YELLOW}The problem identifier can be:")
+        print(f"{Fore.YELLOW}  - A problem number (like '13')")
+        print(f"{Fore.YELLOW}  - A filename without extension (like 'stack')")
+        print(f"{Fore.YELLOW}  - A full problem name (like '13. stack')")
         sys.exit(1)
 
     # Clear screen before running tests
     clear_screen()
 
-    prob_num = sys.argv[1]
-
-    data_file = find_file(prob_num, "data")
-    test_file = find_file(prob_num, "test cases", "test case")
-
+    prob_input = sys.argv[1]
+    
+    # Define folders
+    data_folder = "data"
+    test_folder = "test cases"
+    
+    # Try to find files by the input identifier
+    data_file, test_file = find_files_by_input(prob_input, data_folder, test_folder)
+    
     if not data_file or not test_file:
-        print(f"{Fore.RED}❌ Couldn't find matching files for problem {prob_num}")
+        print(f"{Fore.RED}❌ Couldn't find matching files for '{prob_input}'")
         print(f"{Fore.YELLOW}Make sure data and 'test cases' directories exist with proper files.")
+        print(f"{Fore.YELLOW}The test file should follow the pattern: '<code_filename> test.<ext>'")
+        if data_file and not test_file:
+            print(f"{Fore.YELLOW}Found code file: {os.path.basename(data_file)}")
+            print(f"{Fore.YELLOW}But couldn't find a matching test file.")
         sys.exit(1)
-
+    
+    print(f"{Fore.GREEN}Found code file: {data_file}")
+    print(f"{Fore.GREEN}Found test file: {test_file}")
+    print(f"{Fore.YELLOW}Running tests...\n")
+    
     run_test(data_file, test_file)

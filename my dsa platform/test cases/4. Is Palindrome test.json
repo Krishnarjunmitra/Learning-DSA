@@ -1,0 +1,27 @@
+{
+  "function": "is_palindrome",
+  "inputs": [
+    "racecar",
+    "hello",
+    "A man, a plan, a canal, Panama!",
+    "",
+    "a",
+    "madam",
+    "No lemon, no melon",
+    "Was it a car or a cat I saw?",
+    "12321",
+    "12345"
+  ],
+  "expected": [
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false
+  ]
+}

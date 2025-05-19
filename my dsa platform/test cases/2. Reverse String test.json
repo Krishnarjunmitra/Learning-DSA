@@ -1,0 +1,25 @@
+{
+  "function": "reverse_string",
+  "inputs": [
+    "hello",
+    "world",
+    "a",
+    "",
+    "racecar",
+    "12345",
+    "Able was I ere I saw Elba",
+    "python",
+    "madam"
+  ],
+  "expected": [
+    "olleh",
+    "dlrow",
+    "a",
+    "",
+    "racecar",
+    "54321",
+    "ablE was I ere I saw elbA",
+    "nohtyp",
+    "madam"
+  ]
+}

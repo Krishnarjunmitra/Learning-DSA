@@ -2,6 +2,20 @@
 
 **Author:** [Krishnarjun Mitra](https://github.com/Krishnarjunmitra)
 
+---
+
+> **Notice of Proprietary Rights**
+>
+> This repository, including all code, documentation, and the integrated platform concept, is the intellectual property of Krishnarjun Mitra. The content is made publicly viewable solely for educational and demonstration purposes.
+>
+> **Strictly Prohibited:**
+> - Unauthorized copying, modification, distribution, or reuse of any part of this codebase or the underlying platform concept.
+> - Implementation of similar platforms, in part or in whole, without the express written consent of the author.
+>
+> Any violation of these terms may result in legal action. For licensing inquiries or permission requests, please contact the author directly via GitHub.
+
+---
+
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 [![GitHub issues](https://img.shields.io/github/issues/Krishnarjunmitra/Learning-DSA)](https://github.com/Krishnarjunmitra/Learning-DSA/issues)
 [![GitHub stars](https://img.shields.io/github/stars/Krishnarjunmitra/Learning-DSA)](https://github.com/Krishnarjunmitra/Learning-DSA/stargazers)
@@ -182,10 +196,15 @@ The repository is already published under the ISC license, which is an open-sour
 4. Consider setting up GitHub Actions for automated testing
 5. Add issue templates to standardize bug reports and feature requests
 
-## 📝 License
+## 📝 License & Legal Notice
 
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
+Copyright (c) 2025 Krishnarjun Mitra. All rights reserved.
 
+This repository and its contents are proprietary and confidential. Unauthorized copying, modification, distribution, or implementation of this code or similar platforms, in part or in whole, via any medium, is strictly prohibited without the express written permission of Krishnarjun Mitra.
+
+This repository is made available for educational and demonstration purposes only. For any use beyond personal study, including commercial, academic, or derivative works, explicit written permission from the author is required.
+
+---
 ## 👨‍💻 Author
 
 - **Krishnarjun Mitra** - [GitHub Profile](https://github.com/Krishnarjunmitra)

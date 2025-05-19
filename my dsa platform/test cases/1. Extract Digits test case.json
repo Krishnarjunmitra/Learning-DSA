@@ -1,0 +1,5 @@
+{
+  "function": "extract_digits",
+  "inputs": [12345, -908, 0],
+  "expected": [[1, 2, 3, 4, 5], [9, 0, 8], [0]]
+}

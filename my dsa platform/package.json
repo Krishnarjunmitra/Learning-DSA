@@ -1,0 +1,19 @@
+{
+  "name": "learning-dsa",
+  "version": "1.0.0",
+  "description": "Running DSA solutions with test cases like LeetCode",
+  "main": "test_runner.py",
+  "scripts": {
+    "test": "python test_runner.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krishnarjunmitra/Learning-DSA.git"
+  },
+  "author": "Krishnarjun Mitra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krishnarjunmitra/Learning-DSA/issues"
+  },
+  "homepage": "https://github.com/Krishnarjunmitra/Learning-DSA#README"
+}

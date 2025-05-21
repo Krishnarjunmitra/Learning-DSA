@@ -1,0 +1,21 @@
+{
+  "function": "countSubstrings",
+  "inputs": [
+    ["abc"],
+    ["aaa"],
+    ["racecar"],
+    ["a"],
+    ["abccba"],
+    ["abcd"],
+    ["abba"]
+  ],
+  "expected": [
+    3,
+    6,
+    10,
+    1,
+    9,
+    4,
+    6
+  ]
+}

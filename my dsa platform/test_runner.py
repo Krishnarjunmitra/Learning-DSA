@@ -70,6 +70,9 @@ def run_test(data_file, test_file):
 
     # Import solution module
     spec = importlib.util.spec_from_file_location("solution_module", data_file)
+    if spec is None or spec.loader is None:
+        print(f"{Fore.RED}❌ Could not load the solution module from {data_file}")
+        sys.exit(1)
     solution_module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(solution_module)
     solution = solution_module.Solution()

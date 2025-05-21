@@ -1,0 +1,21 @@
+{
+  "function": "characterReplacement",
+  "inputs": [
+    ["ABAB", 2],
+    ["AABABBA", 1],
+    ["AAAA", 2],
+    ["ABCDE", 1],
+    ["AABACCA", 2],
+    ["ABBB", 2],
+    ["BAAAB", 2]
+  ],
+  "expected": [
+    4,
+    4,
+    4,
+    2,
+    4,
+    4,
+    5
+  ]
+}

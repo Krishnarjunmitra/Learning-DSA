@@ -1,0 +1,21 @@
+{
+  "function": "longestPalindrome",
+  "inputs": [
+    ["babad"],
+    ["cbbd"],
+    ["a"],
+    ["ac"],
+    ["forgeeksskeegfor"],
+    ["abacdfgdcaba"],
+    ["abacdfgdcabba"]
+  ],
+  "expected": [
+    "bab",
+    "bb",
+    "a",
+    "a",
+    "geeksskeeg",
+    "aba",
+    "abba"
+  ]
+}

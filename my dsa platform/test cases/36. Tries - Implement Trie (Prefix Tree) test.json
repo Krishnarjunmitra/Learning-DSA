@@ -1,0 +1,21 @@
+{
+  "function": "search",
+  "inputs": [
+    ["apple"],
+    ["app"],
+    ["banana"],
+    ["appl"],
+    ["applepie"],
+    [""],
+    ["a"]
+  ],
+  "expected": [
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ]
+}

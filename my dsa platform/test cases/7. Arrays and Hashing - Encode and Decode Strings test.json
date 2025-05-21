@@ -1,0 +1,21 @@
+{
+  "function": "decode",
+  "inputs": [
+    ["4#lint4#code4#love3#you"],
+    ["5#hello5#world"],
+    ["0#0#0#"],
+    ["1#a1#b1#c"],
+    ["3#one3#two3#six"],
+    ["2#ab2#cd2#ef"],
+    ["10#abcdefghij"]
+  ],
+  "expected": [
+    ["lint","code","love","you"],
+    ["hello","world"],
+    ["","",""] ,
+    ["a","b","c"],
+    ["one","two","six"],
+    ["ab","cd","ef"],
+    ["abcdefghij"]
+  ]
+}

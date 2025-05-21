@@ -1,0 +1,21 @@
+{
+  "function": "alienOrder",
+  "inputs": [
+    [["wrt","wrf","er","ett","rftt"]],
+    [["z","x"]],
+    [["z","x","z"]],
+    [["abc","ab"]],
+    [["a","b","ca","cc"]],
+    [["baa","abcd","abca","cab","cad"]],
+    [["caa","aaa","aab"]]
+  ],
+  "expected": [
+    "wertf",
+    "zx",
+    "",
+    "",
+    "abc",
+    "bdac",
+    "cab"
+  ]
+}

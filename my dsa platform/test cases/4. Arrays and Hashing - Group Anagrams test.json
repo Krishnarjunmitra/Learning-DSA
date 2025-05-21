@@ -1,0 +1,21 @@
+{
+  "function": "groupAnagrams",
+  "inputs": [
+    [["eat","tea","tan","ate","nat","bat"]],
+    [[""]],
+    [["a"]],
+    [["abc","bca","cab","bac","acb","cba"]],
+    [["abc","def","ghi"]],
+    [["",""], [""]],
+    [["listen","silent","enlist","google","glegoo"]]
+  ],
+  "expected": [
+    [["eat","tea","ate"],["tan","nat"],["bat"]],
+    [[""]],
+    [["a"]],
+    [["abc","bca","cab","bac","acb","cba"]],
+    [["abc"],["def"],["ghi"]],
+    [["","",""]],
+    [["listen","silent","enlist"],["google","glegoo"]]
+  ]
+}

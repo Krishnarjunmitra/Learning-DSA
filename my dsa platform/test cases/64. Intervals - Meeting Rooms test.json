@@ -1,0 +1,7 @@
+[
+    {"function": "canAttendMeetings", "inputs": {"intervals": [[0,30],[5,10],[15,20]]}, "expected": false},
+    {"function": "canAttendMeetings", "inputs": {"intervals": [[7,10],[2,4]]}, "expected": true},
+    {"function": "canAttendMeetings", "inputs": {"intervals": [[1,5],[5,10],[10,15]]}, "expected": true},
+    {"function": "canAttendMeetings", "inputs": {"intervals": [[1,5],[2,6]]}, "expected": false},
+    {"function": "canAttendMeetings", "inputs": {"intervals": []}, "expected": true}
+]

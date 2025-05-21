@@ -1,0 +1,7 @@
+[
+    {"function": "reverseBits", "inputs": {"n": 43261596}, "expected": 964176192},
+    {"function": "reverseBits", "inputs": {"n": 4294967293}, "expected": 3221225471},
+    {"function": "reverseBits", "inputs": {"n": 0}, "expected": 0},
+    {"function": "reverseBits", "inputs": {"n": 1}, "expected": 2147483648},
+    {"function": "reverseBits", "inputs": {"n": 2}, "expected": 1073741824}
+]

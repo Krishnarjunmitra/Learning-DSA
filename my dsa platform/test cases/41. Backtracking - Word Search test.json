@@ -1,0 +1,21 @@
+{
+  "function": "exist",
+  "inputs": [
+    [[["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "ABCCED"],
+    [[["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "SEE"],
+    [[["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "ABCB"],
+    [[["A"]], "A"],
+    [[["A","B"],["C","D"]], "ACDB"],
+    [[["A","B"],["C","D"]], "ABCD"],
+    [[["A","B"],["C","D"]], "DCBA"]
+  ],
+  "expected": [
+    true,
+    true,
+    false,
+    true,
+    true,
+    false,
+    false
+  ]
+}

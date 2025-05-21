@@ -1,0 +1,29 @@
+{
+  "function": "search",
+  "inputs": [
+    ["bad"],
+    ["dad"],
+    ["mad"],
+    ["pad"],
+    [".ad"],
+    ["b.."],
+    ["b.d"],
+    ["..d"],
+    ["..."],
+    ["b..."],
+    ["b..d"]
+  ],
+  "expected": [
+    true,
+    true,
+    true,
+    false,
+    true,
+    true,
+    false,
+    false,
+    true,
+    false,
+    false
+  ]
+}

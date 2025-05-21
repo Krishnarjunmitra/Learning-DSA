@@ -1,0 +1,25 @@
+{
+  "function": "isAnagram",
+  "inputs": [
+    ["anagram", "nagaram"],
+    ["rat", "car"],
+    ["a", "a"],
+    ["", ""],
+    ["listen", "silent"],
+    ["triangle", "integral"],
+    ["abc", "def"],
+    ["aabbcc", "abcabc"],
+    ["abcd", "abcde"]
+  ],
+  "expected": [
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    false,
+    true,
+    false
+  ]
+}

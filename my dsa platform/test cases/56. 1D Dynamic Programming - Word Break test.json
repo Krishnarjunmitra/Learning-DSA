@@ -1,0 +1,21 @@
+{
+  "function": "wordBreak",
+  "inputs": [
+    ["leetcode", ["leet","code"]],
+    ["applepenapple", ["apple","pen"]],
+    ["catsandog", ["cats","dog","sand","and","cat"]],
+    ["aaaaaaa", ["aaaa","aaa"]],
+    ["cars", ["car","ca","rs"]],
+    ["a", ["a"]],
+    ["b", ["a"]]
+  ],
+  "expected": [
+    true,
+    true,
+    false,
+    true,
+    true,
+    true,
+    false
+  ]
+}

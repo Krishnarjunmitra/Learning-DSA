@@ -1,0 +1,21 @@
+{
+  "function": "longestCommonSubsequence",
+  "inputs": [
+    ["abcde", "ace"],
+    ["abc", "abc"],
+    ["abc", "def"],
+    ["bl", "yby"],
+    ["ezupkr", "ubmrapg"],
+    ["bsbininm", "jmjkbkjkv"],
+    ["oxcpqrsvwf", "shmtulqrypy"]
+  ],
+  "expected": [
+    3,
+    3,
+    0,
+    1,
+    2,
+    1,
+    2
+  ]
+}

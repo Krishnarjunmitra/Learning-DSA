@@ -1,0 +1,21 @@
+{
+  "function": "minWindow",
+  "inputs": [
+    ["ADOBECODEBANC", "ABC"],
+    ["a", "a"],
+    ["a", "aa"],
+    ["ab", "b"],
+    ["bba", "ab"],
+    ["bbaa", "aba"],
+    ["abcabdebac", "cda"]
+  ],
+  "expected": [
+    "BANC",
+    "a",
+    "",
+    "b",
+    "ba",
+    "baa",
+    "cabd"
+  ]
+}

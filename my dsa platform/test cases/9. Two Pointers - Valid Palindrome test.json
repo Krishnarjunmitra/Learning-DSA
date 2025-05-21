@@ -1,0 +1,25 @@
+{
+  "function": "isPalindrome",
+  "inputs": [
+    ["A man, a plan, a canal: Panama"],
+    ["race a car"],
+    [""],
+    ["0P"],
+    ["ab_a"],
+    ["No lemon, no melon"],
+    ["Was it a car or a cat I saw?"],
+    ["Red roses run no risk, sir, on Nurse's order."],
+    ["not a palindrome"]
+  ],
+  "expected": [
+    true,
+    false,
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    false
+  ]
+}
